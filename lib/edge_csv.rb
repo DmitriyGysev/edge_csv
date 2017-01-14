@@ -1,5 +1,5 @@
 require "edge_csv/version"
 
 module EdgeCsv
-  # Your code goes here...
+  VERSION = "0.0.1"
 end

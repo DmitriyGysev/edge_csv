@@ -6,12 +6,12 @@ require 'edge_csv/version'
 Gem::Specification.new do |spec|
   spec.name          = "edge_csv"
   spec.version       = EdgeCsv::VERSION
-  spec.authors       = ["Dmitriy"]
+  spec.authors       = ["Dmitry Gusev", "Arvid Stahovskiy"]
   spec.email         = ["dmitriy.gusev@duniceedge.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{A warning so people will logoff and go to bed!.}
+  spec.description   = %q{A warning so people will logoff and go to bed!}
+  spec.homepage      = ""
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
