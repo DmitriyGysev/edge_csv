@@ -1,5 +1,13 @@
-require "edge_csv/version"
+require 'edge_csv/export'
+class EdgeCsv
 
-module EdgeCsv
-  VERSION = "0.0.1"
+  def self.import
+    puts "Started Importing"
+    puts "Params are: "
+  end
+
+  def self.export data
+    Export.new(data).start
+  end
+
 end

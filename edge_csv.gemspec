@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{A warning so people will logoff and go to bed!.}
   spec.description   = %q{A warning so people will logoff and go to bed!}
-  spec.homepage      = ""
+  spec.homepage      = "http://rubygems.org/gems/edge_cs'"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
