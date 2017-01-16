@@ -3,32 +3,32 @@ class Export
 
   def initialize data
     @name = data['name'] || 'new_csv'
+    @auto_send = data['auto_send'] || true
     @headers = data['headers'] || true
     @subjects = data['subjects'] || []
     @fields = data['fields'] || get_fields(@subjects[0])
-    @sequince = data['sequince'] || []
+    @sequence = data['sequence'] || []
   end
 
   def start
     puts("Started export #{@name}")
-    send_data(collect_csv, :filename => "#{@name}.csv", :type => "text/csv")
-    puts(collect_csv)
+    if @auto_send
+      send_data(collect_csv, :filename => "#{@name}.csv", :type => "text/csv")
+    else
+      collect_csv
+    end
+    puts("Completed export #{@name}")
   end
 
   private
 
   def collect_csv
-    sequinces_headers
-    header = convert_headers(@fields)
-    csv = CSV.generate(headers: true) do |csv|
+    header = convert_headers(@fields, @headers)
+    keys = sequences_headers(@sequence, @fields)
+    CSV.generate(headers: true) do |csv|
       csv << header if @headers
-        @subjects.each do |subject|
-          csv << [
-
-          ]
-        end
+      @subjects.each{ |subject| csv << keys.map{ |key| subject[key] } }
     end
-    csv
   end
 
 
