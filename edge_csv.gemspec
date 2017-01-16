@@ -6,7 +6,7 @@ require 'edge_csv/version'
 Gem::Specification.new do |spec|
   spec.name          = "edge_csv"
   spec.version       = EdgeCsv::VERSION
-  spec.authors       = ["Dmitry Gusev", "Arvid Stahovskiy"]
+  spec.authors       = ["Dmitry Gusev", "Arvid Stahovskiy", "Igor Potapov"]
   spec.email         = ["dmitriy.gusev@duniceedge.com"]
 
   spec.summary       = %q{A warning so people will logoff and go to bed!.}
